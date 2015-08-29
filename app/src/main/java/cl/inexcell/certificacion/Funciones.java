@@ -13,7 +13,9 @@ import android.util.Base64;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -89,5 +91,21 @@ public class Funciones {
         return dialog;
     }
 
+    public static TextView makeTextView(Context ctx, String text){
+        TextView t = new TextView(ctx);
+        t.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        t.setText(text);
+        return t;
+    }
+    public static TextView makeTextView(Context ctx, String text,int tipo){
+        TextView t = new TextView(ctx);
+        if(tipo == 0)
+        t.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        if(tipo == 1)
+        t.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        t.setGravity(Gravity.CENTER_HORIZONTAL);
+        t.setText(text);
+        return t;
+    }
 
 }

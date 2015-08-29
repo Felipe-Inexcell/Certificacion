@@ -176,8 +176,8 @@ public class Principal extends Activity {
                 String consulta;
                 if (phone.getText().toString().equals("2")) {
                     Log.i(TAG, "Consulta Dummy");
-                    Log.i(TAG, error1());
-                    consulta = error1();
+                    Log.i(TAG, URLs.RESOURCE);
+                    consulta = URLs.RESOURCE;
                 } else
                     consulta = SoapRequestMovistar.getResource(IMEI, IMSI, phone.getText().toString());
 
