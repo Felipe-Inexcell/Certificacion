@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="Version">Versión 2.2.1</string>
-    <string name="app_name">Certificacion</string>
+    <string name="versioncode">1.0.1</string>
+    <string name="Version">Versión 1.0.1 @ 2015 VPT</string>
+    <string name="SubLogo">\@ 2015 VPT</string>
+    <string name="app_name">Explorador</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="instalacion">Consultas y Pruebas</string>
@@ -61,8 +62,7 @@
         <item>Otro</item>
     </string-array>
 
-    <string name="title_activity_dct">DCT</string>
+    <string name="title_activity_casa_cerrada">CasaCerrada</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_detalle_electrico">DetalleElectrico</string>
 
 </resources>

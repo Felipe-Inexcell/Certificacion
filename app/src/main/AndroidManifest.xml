@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cl.inexcell.certificacion"
+    package="cl.inexcell.exploradorperu"
     android:versionCode="1"
     android:versionName="1.4" >
 
@@ -10,7 +10,7 @@
         android:targetSdkVersion="17" />
 
     <permission
-        android:name="cl.inexcell.certificacion.permission.MAPS_RECEIVE"
+        android:name="cl.inexcell.exploradorperu.permission.MAPS_RECEIVE"
         android:protectionLevel="signature" />
 
     <uses-permission android:name="cl.inexcell.sistemadegestion.permission.MAPS_RECEIVE" />
@@ -40,12 +40,12 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyDnMMi8oUvyJOWuFniANBfe0DOgFoXCYgo" />
+            android:value="AIzaSyCNKjolCLF9D0fx5se3fwInZrY2l1SHFno" />
 
-        <service android:name=".Demonio_Certificar_3G" />
+        <service android:name="cl.inexcell.exploradorperu.Demonio_Certificar_3G" />
 
         <activity
-            android:name=".Principal"
+            android:name="cl.inexcell.exploradorperu.Principal"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -55,53 +55,56 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Notificar_Averias"
+            android:name="cl.inexcell.exploradorperu.Notificar_Averias"
             android:label="@string/app_averias"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".Plantas_Externas"
+            android:name="cl.inexcell.exploradorperu.Plantas_Externas"
             android:label="@string/app_plantas_externas"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".VistaTopologica"
+            android:name="cl.inexcell.exploradorperu.VistaTopologica"
             android:label="@string/certificar_wifi1"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".Certificar"
+            android:name="cl.inexcell.exploradorperu.Certificar"
             android:label="@string/certificar_wifi1"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".FactActivity"
+            android:name="cl.inexcell.exploradorperu.FactActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".FactActivity_bak"
+            android:name="cl.inexcell.exploradorperu.FactActivity_bak"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".CertificarPar"
+            android:name="cl.inexcell.exploradorperu.CertificarPar"
             android:label="@string/certificar_wifi1"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".FAQActivity"
+            android:name="cl.inexcell.exploradorperu.FAQActivity"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".ActividadPDF"
+            android:name="cl.inexcell.exploradorperu.ActividadPDF"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".DCT"
+            android:name="cl.inexcell.exploradorperu.CasaCerrada"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".DetalleElectrico"
-            android:label="@string/title_activity_detalle_electrico" >
+            android:name="cl.inexcell.exploradorperu.DCT"
+            android:screenOrientation="portrait" >
+        </activity><activity
+            android:name="cl.inexcell.exploradorperu.DetalleElectrico"
+        android:screenOrientation="portrait" >
         </activity>
     </application>
 

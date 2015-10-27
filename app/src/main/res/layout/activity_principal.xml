@@ -95,16 +95,32 @@
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="@string/Version"
-                android:id="@+id/textView"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_alignTop="@+id/imageButtonFAQ"
-                android:gravity="center_vertical" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@+id/imageButtonFAQ"
+                android:layout_toLeftOf="@+id/imageButtonShutdown"
+                android:layout_toStartOf="@+id/imageButtonShutdown">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Version"
+                    android:id="@+id/textView"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <ImageView
+                    android:contentDescription="@string/SubLogo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/logovpt" />
+
+            </LinearLayout>
+
         </RelativeLayout>
         
         
@@ -129,7 +145,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignParentRight="true"
 		        android:layout_alignParentTop="true"
-		        android:layout_marginBottom="3dp"
+		        android:layout_marginBottom="5dp"
 		        android:layout_marginLeft="10dp"
 		        android:layout_marginRight="10dp"
                 android:background="#288EC6"
@@ -144,35 +160,78 @@
 		            android:text="Búsqueda Cliente"
 		            android:textAppearance="?android:attr/textAppearanceSmall"
 		            android:textColor="#FFFFFF" />
-		        
-		        <LinearLayout
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Área"
+                        android:id="@+id/textView38"
+                        android:layout_marginRight="30dp"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Teléfono"
+                        android:id="@+id/textView39"
+                        android:layout_marginRight="90dp"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
 		            android:layout_width="fill_parent"
 		            android:layout_height="wrap_content"
 		            android:layout_gravity="center"
-		            android:layout_marginTop="20dp"
-		            android:gravity="center"
+                    android:gravity="center"
 		            android:orientation="horizontal" >
-		            
-		            <EditText
+
+                    <EditText
+                        android:id="@+id/etPpal_area"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/fondo1"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="4dp"
+                        android:paddingRight="4dp"
+                        android:paddingTop="10dp"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:typeface="normal"
+                        android:maxLength="3" />
+
+                    <EditText
 		                android:id="@+id/etPpal_telefono"
 		                android:layout_width="wrap_content"
 		                android:layout_height="wrap_content"
 		                android:layout_marginRight="10dp"
 		                android:background="@drawable/fondo1"
 		                android:gravity="center_vertical"
-		                android:hint="Telefono Cliente"
-		                android:inputType="number"
+                        android:inputType="number"
 		                android:lines="1"
 		                android:maxLines="1"
 		                android:maxWidth="150dp"
 		                android:minWidth="100dp"
 		                android:paddingBottom="10dp"
-		                android:paddingLeft="20dp"
-		                android:paddingRight="20dp"
+		                android:paddingLeft="4dp"
+		                android:paddingRight="4dp"
 		                android:paddingTop="10dp"
 		                android:textSize="15sp"
 		                android:textStyle="normal"
-		                android:typeface="normal" />
+		                android:typeface="normal"
+                        android:maxLength="10" />
 
 		            <ImageButton
 		                android:id="@+id/imageButton1"
@@ -198,12 +257,12 @@
 		        android:layout_marginBottom="10dp"
 		        android:layout_marginLeft="10dp"
 		        android:layout_marginRight="10dp"
-		        android:layout_marginTop="3dp"
+		        android:layout_marginTop="5dp"
 		        android:orientation="horizontal"
 		         >
 
 		        <FrameLayout
-		            android:layout_width="wrap_content"
+		            android:layout_width="0dp"
 		            android:layout_height="wrap_content"
 		            android:layout_marginRight="5dp"
 		            android:layout_weight="1">
@@ -215,7 +274,8 @@
                         android:background="@drawable/tabla"
                         android:contentDescription="@string/plantas_externas"
                         android:onClick="show_plantas_externas"
-                        android:src="@drawable/planta_externa_click" />
+                        android:src="@drawable/planta_externa_click"
+                        android:scaleType="fitXY" />
                     
                      <TextView
                          android:id="@+id/textView4"
@@ -231,7 +291,7 @@
                 </FrameLayout>
 
                 <FrameLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content" 
                     android:layout_marginLeft="5dp"
                     android:layout_weight="1">
@@ -243,7 +303,8 @@
                         android:background="@drawable/tabla"
                         android:contentDescription="@string/notificar_averia"
                         android:onClick="show_notificar_averias"
-                        android:src="@drawable/notificar_click" />
+                        android:src="@drawable/notificar_click"
+                        android:scaleType="fitXY" />
                     
                     <TextView
                         android:id="@+id/textView5"
